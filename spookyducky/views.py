@@ -3,8 +3,6 @@ from django.contrib.auth import authenticate, login
 from django.template import loader
 
 def index(request):
-    # template = loader.get_template('spookyducky/index.html')
-    # return HttpResponse(template.render())
     return render(request, 'spookyducky/index.html')
     
 def login_user(request):
@@ -24,4 +22,4 @@ def login_user(request):
         else:
             state = "Your username and/or password were incorrect."
 
-    return render_to_response('login.html',{'state':state, 'username': username})
+    return render_to_response('spookyducky/login.html', {'state':state, 'username': username})
