@@ -1,0 +1,18 @@
+{% load staticfiles %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Spookyducky - {% block title %}SPOOKY SHIT{% endblock %}</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'spookyducky/style.css' %}">
+</head>
+
+<body>
+    {% if user.is_authenticated %}
+        <h1>Rango says... hello {{ user.username }}!</h1>
+        <a href="{% url 'spookyducky:logout' %}">Logout</a>
+    {% endif %}
+    
+    {% block content %}CONTENT{% endblock %}
+</body>
