@@ -2,6 +2,11 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'spookyducky/style.css' %}">
 
+{% if user.is_authenticated %}
+    <h1>Rango says... hello {{ user.username }}!</h1>
+    <a href="{% url 'spookyducky:logout' %}">Logout</a>
+{% endif %}
+
 <div id="body">
     <div id="menu">
         <ul>
