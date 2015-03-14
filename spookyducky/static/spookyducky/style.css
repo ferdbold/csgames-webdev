@@ -1,0 +1,42 @@
+#body #menu
+{
+    
+}
+
+#body #menu ul
+{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+#body #menu ul li
+{
+    display: inline;
+}
+
+#body #menu ul li a
+{
+    text-decoration: none;
+    padding: .2em 1em;
+    color: #fff;
+    background-color: #036;
+}
+
+#body #menu ul li a:hover
+{
+    color: #fff;
+    background-color: #369;
+}
+
+#body #content
+{
+    font-family: sans-serif;
+}
+
+#body #content p
+{
+    text-align: justify;
+    font-size: 12px;
+}
